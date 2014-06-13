@@ -1,10 +1,4 @@
 # The following lines were added by compinstall
-
-zstyle ':completion:*' completer _expand _complete _ignored _approximate
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}'
-zstyle :compinstall filename '/Users/Kurren/.zshrc'
-
 autoload -Uz compinit
 compinit
 
@@ -15,11 +9,18 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
-. /bin/z.sh
+ . /usr/bin/z.sh
 
 # Kurren config
+source ~/dotfiles/setopt.zsh
+source ~/dotfiles/exports.zsh
+source ~/dotfiles/prompt.zsh
+source ~/dotfiles/completion.zsh
+source ~/dotfiles/aliases.zsh
+
 PS1='%F{white}%T%f %F{yellow}%20<...<%~%f %# '
-setopt auto_cd 
 setopt nobeep
 alias ls='ls -Gl'
 
+# OPAM stuff
+. /Users/Kurren/.opan/opam-init/init.zsh > /dev/null 2> /dev/null || true
