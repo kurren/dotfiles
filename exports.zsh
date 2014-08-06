@@ -5,7 +5,7 @@
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 
-export NODE_PATH=$NODE_PATH:/Users/Kurren/npm/lib/node_modules
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 export LC_COLLATE=C 
 
 # Virtual Environment Stuff

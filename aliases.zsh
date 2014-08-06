@@ -34,6 +34,7 @@ alias 'psqlstop=/usr/local/pgsql/bin/pg_ctl stop'
 # -------------------------------------------------------------------
 # Git
 # # -------------------------------------------------------------------
+alias gst='git status'
 alias ga='git add'
 alias gp='git push'
 alias gl='git log'
