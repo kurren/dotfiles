@@ -1,4 +1,4 @@
-# The following lines were added by compinstall
+ The following lines were added by compinstall
 autoload -Uz compinit
 compinit
 
@@ -10,13 +10,6 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
  . /usr/bin/z.sh
-
-# Kurren config
-source ~/dotfiles/setopt.zsh
-source ~/dotfiles/exports.zsh
-source ~/dotfiles/prompt.zsh
-source ~/dotfiles/completion.zsh
-source ~/dotfiles/aliases.zsh
 
 PS1='%F{cyan}%T%f %n-%# %F{yellow}%20<..<%~%f '
 setopt nobeep
