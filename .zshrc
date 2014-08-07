@@ -18,7 +18,7 @@ source ~/dotfiles/prompt.zsh
 source ~/dotfiles/completion.zsh
 source ~/dotfiles/aliases.zsh
 
-PS1='%F{white}%T%f %F{yellow}%20<...<%~%f %# '
+PS1='%F{cyan}%T%f %n-%# %F{yellow}%20<..<%~%f '
 setopt nobeep
 alias ls='ls -Gl'
 
