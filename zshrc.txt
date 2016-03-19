@@ -1,0 +1,67 @@
+#lighe End of lines configured by zsh-newuser-install
+. `brew --prefix`/etc/profile.d/z.sh
+
+# Autocompletion
+autoload -U compinit promptinit colors
+compinit
+promptinit
+colors
+
+# Autocompletion with arrow-key drive interface 
+zstyle ':completion:*' menu select
+
+# Autocompletion of command line switches for aliases
+setopt completealiases
+
+# Preventing duplicate lines in history
+setopt HIST_IGNORE_DUPS
+
+# Prompt customisation
+PROMPT='%F{202}%#%f %F{222}%T%f %~: '
+
+# Persistent rehash
+setopt nohashdirs
+
+# Switching directories (for lazy people)
+setopt autocd 
+
+# Share history across ZSH sessions
+setopt append_history share_history histignorealldups
+
+# virtualenv path
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/apb-devel
+source /usr/local/bin/virtualenvwrapper.sh
+
+# npm path
+export PATH=/usr/local/share/npm/bin:$PATH
+
+#various paths
+export PATH=$PATH:/usr/local/bin:/usr/local/opt/bin
+
+# aliases
+alias ll="ls -la"
+alias l="ll -G"
+
+alias awk="gawk"
+
+
+alias gst="git status"
+
+alias python="python3"
+
+
+# Staged
+ZSH_THEME_GIT_PROMPT_STAGED_ADDED="%{$G%}A"
+ZSH_THEME_GIT_PROMPT_STAGED_MODIFIED="%{$G%}M"
+ZSH_THEME_GIT_PROMPT_STAGED_RENAMED="%{$G%}R"
+ZSH_THEME_GIT_PROMPT_STAGED_DELETED="%{$G%}D"
+
+# Not-staged
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$R%}?"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$R%}M"
+ZSH_THEME_GIT_PROMPT_DELETED="%{$R%}D"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$R%}UU"
+
+
+
